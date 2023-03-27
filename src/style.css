@@ -1,75 +1,98 @@
 @font-face {
-    font-family: "Friz Quadrata";
-    font-weight: normal;
-    src: url("./fonts/Friz Quadrata Regular.ttf");
+  font-family: "Friz Quadrata";
+  font-weight: normal;
+  src: url("./fonts/Friz Quadrata Regular.ttf");
 }
 
 @font-face {
-    font-family: "Friz Quadrata";
-    font-weight: bold;
-    src: url("./fonts/Friz Quadrata Bold.otf");
+  font-family: "Friz Quadrata";
+  font-weight: bold;
+  src: url("./fonts/Friz Quadrata Bold.otf");
 }
 
 @font-face {
-    font-family: "Friz Quadrata";
-    font-style: italic;
-    src: url("./fonts/Friz Quadrata Italic.ttf");
+  font-family: "Friz Quadrata";
+  font-style: italic;
+  src: url("./fonts/Friz Quadrata Italic.ttf");
 }
 
 * {
-    font-family: "Friz Quadrata";
+  box-sizing: border-box;
+  font-family: "Friz Quadrata";
+  color: #CD9B1D;
+  text-align: center;
 }
 
 body {
-    background-image: url(./card-imgs/BackGround.png);
-    background-size:cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
+  background-image: url(./card-imgs/BackGround.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 header {
-    color: antiquewhite;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-    font-size: 60px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  font-size: 20px;
 }
 
-h1 {
-    font-weight: bold;
+#roles-cards {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
 }
 
-h3 {
-    font-size: 50px;
-    position: absolute;
-    bottom: -5%;
+.role-card {
+  width: 130px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  align-items: center;
+  cursor: pointer;
 }
 
-main {
-    display: flex;
-    font-size: 54px;
-    text-align: center;
-    padding: 1% 15.625%;
-    justify-content: center;
-    align-items: center;
-    color: antiquewhite;
+.selected-card {
+  border-width: 2px;
+  border-style: solid;
+  border-color: #CD9B1D;
 }
 
-.champions-cards {
-    gap: 75px;
-    justify-content: right;
-    color: #ffffff;
+.role-card img {
+  display: block;
+  width: 100%;
 }
 
-section {
-    width: 2%;
-    position: relative;
+.role-card h3 {
+  position: absolute;
+  bottom: 3px;
+  color: #ffffff94;
+  font-size: 1em;
+  margin: 0;
 }
 
-section .champions-img {
-    width: 300%;
-    flex-direction: column;
+.container {
+  display: block;
+}
 
+#champions-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  color: #ffffff;
+  gap: 75px;
+  cursor: grab;
+}
+
+.champion-lol {
+  width: calc(33.33% - 2 * 75px / 3);
+  font-size: 30px;
+  text-shadow: 10px 10px 20px #CD9B1D;
+}
+
+.champion-lol img {
+  display: block;
+  width: 100%;
 }

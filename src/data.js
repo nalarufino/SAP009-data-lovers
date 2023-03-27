@@ -1,13 +1,18 @@
-// estas funciones son de ejemplo
+export function filterRole(champions, role) {
+    return champions.filter(champion => champion.tags.includes(role))
+}
 
-export const example = () => {
-  return 'example';
-};
+export const order = (champion) => {
+    const alphabeticOrder = [...champion]
+    alphabeticOrder.sort(function (a, b) {
+        if (a.name < b.name) {
+            return -1;
+        }
+        if (a.name > b.name) {
+            return 1;
+        }
+        return 0;
+    })
+    return alphabeticOrder
+}
 
-export const anotherExample = () => {
-  return 'OMG';
-};
-
-export const filterTags = (data,typeData, condition) => data.filter((tag) => {
-  return (tag[typeData] === condition);
-})

@@ -1,48 +1,103 @@
-import data from './data/lol/lol.js';
-import { example } from './data.js';
+import lol from './data/lol/lol.js';
+import { filterRole, order } from './data.js';
 
-console.log(example, data);
+console.log(lol, order);
 
-let lolContent = []
-    for (let item in lol.data) {
-        lolContent.push(lol.data[item])
-    }
+let lolData = [];
+let championList = document.getElementById("champions-list")
 
-function createCard(splash, name){
-    let cards = document.createElement('card')
-    cards.setAttribute('class', 'show-champions')
-    cards.innerHTML = (`<img src = '${splash}'> <p>${name}</p>`)
-    return cards
-}
-showList(championsList);
 
-let championsList = document.getElementById("list")
-function showList(data){
-    championsList.innerHTML = ""
-    for (let list in data) {
-    let eachChampion = createCard(data[list].splash,data[list].name)
-    championsList.addEventListener("click", () => {
-        startModal()
-        modalTemplate(data[list].name,data[list].splash,data[list].tags,data[list].info.attack,data[list].info.deffense,data[list].info.difficult)
+window.onload = () => {
+  for (let item in lol.data) {
+    lolData.push(lol.data[item]);
+  }
+
+  const roles = getRoles()
+  createRolesCards(roles)
+  createChampionsCards(lolData)
+
+  const rolesCards = Array.from(document.getElementsByClassName("role-card"))
+
+  for (const card of rolesCards) {
+    card.addEventListener('click', () => {
+      for (const roleCard of rolesCards.filter(c => c !== card)) {
+        roleCard.classList.remove('selected-card')
+      }
+      if (!card.classList.contains('selected-card')) {
+        card.classList.add('selected-card')
+        const cardImg = card.getElementsByTagName("img")[0]
+        const champions = filterRole(lolData, cardImg.id)
+
+        createChampionsCards(champions)
+      }
+      else {
+        card.classList.remove('selected-card')
+        createChampionsCards(lolData)
+      }
+
     })
+  }
+
+}
+
+function createChampionsCards(champions) {
+  championList.innerHTML = "";
+
+  for (let i in champions) {
+    let eachCard = createDiv(champions[i].splash, champions[i].name);
+    championList.appendChild(eachCard);
+  }
+
+}
+
+function createDiv(photo, name) {
+
+  let cards = document.createElement('div')
+  cards.setAttribute('class', 'champion-lol')
+  cards.innerHTML = (`<img src = '${photo}'> <p>${name}</p>`)
+
+  return cards
+}
+createChampionsCards(lolData)
+
+function getRoles() {
+  const listRoles = []
+
+  for (const champion of lolData) {
+    for (const tag of champion.tags) {
+      if (listRoles.includes(tag)) {
+        continue
+      }
+      else {
+        listRoles.push(tag)
+      }
     }
+  }
+
+  return listRoles
 }
 
-function modalTemplate(name, image, tags, attack, defense, difficulty) {
-    let cardsChampions = `<h2>${name}</h2>
-    <img src = '${image}'>
-    <p>Função: ${tags}</p>
-    <p>Nível de Ataque: ${attack}</p>
-    <p>Nível de Defesa: ${defense}</p>
-    <p>Dificuldade para jogar: ${difficulty}</p>`
-    document.getElementById('box-content').innerHTML - cardsChampions;
+function createRolesCards(roles) {
+  const rolesCards = []
+
+  for (const role of roles) {
+    const roleCard = `
+      <article class="role-card">
+        <img id="${role}" src="./card-imgs/${role}.png" alt="${role}-img">
+        <h3>${role}</h3>
+      </article>
+    `;
+
+    rolesCards.push(roleCard);
+  }
+
+  document.getElementById("roles-cards").innerHTML = rolesCards.join("")
 }
 
-function startModal(){
-    const modal = document.getElementById('modal');
-    modal.classList.add('show')
-    modal.addEventListener('click', (e) => {
-        if(e.target.id == 'modal' || e.target.className == 'close')
-        modal.classList.remove('show')
-    })
-}
+/*
+<article class="role-card">
+      <img id="assassins" src="./card-imgs/Assassinos.png" alt="assassin-img">
+      <h3>Assassinos</h3>
+    </article>
+*/
+
