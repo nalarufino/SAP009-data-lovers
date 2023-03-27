@@ -1,12 +1,38 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Data Lovers</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <div id="root"></div>
-    <script src="main.js" type="module"></script>
-  </body>
+
+<head>
+  <meta charset="utf-8">
+  <title>Data Lovers</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <header>
+    <h1>Conhecendo os campeões</h1>
+    <p>Conheça os campeões de LoL a partir de suas funções dentro do jogo</p>
+  </header>
+
+  <section id="roles-cards"></section>
+
+  <div id="container" class="container">
+    <div>
+      <p class="order-txt">Odernar de:</p>
+      <select class="order" name="Ordenar por:" id="order">
+        <option class="order" value="A-Z">A-Z</option>
+        <option class="order" value="Z-A">Z-A</option>
+      </select>
+    </div>
+  </div>
+
+  <main>
+    <h2>Lista de Campeões</h2>
+    <div id="champions-list" class="champions-list"></div>
+  </main>
+
+  <div id="root"></div>
+  <script src="main.js" type="module"></script>
+</body>
+
 </html>
