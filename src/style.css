@@ -39,6 +39,10 @@ header {
   font-size: 20px;
 }
 
+main h2 {
+  text-shadow: 3px 0px #2f165e;
+}
+
 #roles-cards {
   display: flex;
   gap: 15px;
@@ -73,26 +77,27 @@ header {
   margin: 0;
 }
 
-.container {
-  display: block;
-}
-
 #champions-list {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  color: #ffffff;
   gap: 75px;
-  cursor: grab;
 }
 
 .champion-lol {
+  background-color: #2f165e94;
   width: calc(33.33% - 2 * 75px / 3);
-  font-size: 30px;
-  text-shadow: 10px 10px 20px #CD9B1D;
+  font-size: 22px;
+  text-shadow: 6px 3px 15px #CD9B1D;
 }
 
 .champion-lol img {
   display: block;
   width: 100%;
+}
+
+.champion-lol p {
+  font-style: italic;
+  font-size: 18px;
+  text-shadow: none;
 }

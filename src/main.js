@@ -3,18 +3,18 @@ import { filterRole, order } from './data.js';
 
 console.log(lol, order);
 
-let lolData = [];
+let allChampions = [];
 let championList = document.getElementById("champions-list")
 
 
 window.onload = () => {
   for (let item in lol.data) {
-    lolData.push(lol.data[item]);
+    allChampions.push(lol.data[item]);
   }
 
   const roles = getRoles()
   createRolesCards(roles)
-  createChampionsCards(lolData)
+  createChampionsCards(allChampions)
 
   const rolesCards = Array.from(document.getElementsByClassName("role-card"))
 
@@ -26,13 +26,13 @@ window.onload = () => {
       if (!card.classList.contains('selected-card')) {
         card.classList.add('selected-card')
         const cardImg = card.getElementsByTagName("img")[0]
-        const champions = filterRole(lolData, cardImg.id)
+        const champions = filterRole(allChampions, cardImg.id)
 
         createChampionsCards(champions)
       }
       else {
         card.classList.remove('selected-card')
-        createChampionsCards(lolData)
+        createChampionsCards(allChampions)
       }
 
     })
@@ -44,26 +44,26 @@ function createChampionsCards(champions) {
   championList.innerHTML = "";
 
   for (let i in champions) {
-    let eachCard = createDiv(champions[i].splash, champions[i].name);
+    let eachCard = createDiv(champions[i].splash, champions[i].name, champions[i].info.attack, champions[i].info.defense, champions[i].info.magic, champions[i].info.difficulty);
     championList.appendChild(eachCard);
   }
 
 }
 
-function createDiv(photo, name) {
+function createDiv(photo, name, attack, defense, magic, difficulty) {
 
   let cards = document.createElement('div')
   cards.setAttribute('class', 'champion-lol')
-  cards.innerHTML = (`<img src = '${photo}'> <p>${name}</p>`)
+  cards.innerHTML = (`<img src = '${photo}'> <h3>${name}</h3> <p>Níveis de Ataque: ${attack} Defesa: ${defense} Magia: ${magic}</p> <p>Dificuldade: ${difficulty}</p>`)
 
   return cards
 }
-createChampionsCards(lolData)
+createChampionsCards(allChampions)
 
 function getRoles() {
   const listRoles = []
 
-  for (const champion of lolData) {
+  for (const champion of allChampions) {
     for (const tag of champion.tags) {
       if (listRoles.includes(tag)) {
         continue
@@ -93,11 +93,3 @@ function createRolesCards(roles) {
 
   document.getElementById("roles-cards").innerHTML = rolesCards.join("")
 }
-
-/*
-<article class="role-card">
-      <img id="assassins" src="./card-imgs/Assassinos.png" alt="assassin-img">
-      <h3>Assassinos</h3>
-    </article>
-*/
-
