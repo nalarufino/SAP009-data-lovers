@@ -16,3 +16,7 @@ export const order = (champion) => {
     return alphabeticOrder
 }
 
+export function calculatePercent(champions, allChampions) {
+    const percentage = (champions.length / allChampions.length) * 100;
+    return percentage.toFixed(2)
+}
