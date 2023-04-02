@@ -101,3 +101,12 @@ main h2 {
   font-size: 18px;
   text-shadow: none;
 }
+
+#percent-roles {
+  display: inline-grid;
+  background-color: #2f165e94;
+  margin-top: 15px;
+  width: 600px;
+  align-items: center;
+  font-size: 25px;
+}

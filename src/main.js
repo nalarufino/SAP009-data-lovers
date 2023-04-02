@@ -1,7 +1,7 @@
 import lol from './data/lol/lol.js';
-import { filterRole, order } from './data.js';
+import { filterRole, order, calculatePercent} from './data.js';
 
-console.log(lol, order);
+console.log(order, calculatePercent);
 
 let allChampions = [];
 let championList = document.getElementById("champions-list")
@@ -29,10 +29,13 @@ window.onload = () => {
         const champions = filterRole(allChampions, cardImg.id)
 
         createChampionsCards(champions)
+        showPercentChampions(champions, cardImg.id)
+
       }
       else {
         card.classList.remove('selected-card')
         createChampionsCards(allChampions)
+        removePercentChampions()
       }
 
     })
@@ -92,4 +95,15 @@ function createRolesCards(roles) {
   }
 
   document.getElementById("roles-cards").innerHTML = rolesCards.join("")
+}
+
+function showPercentChampions(champions, role){
+  const championsPercentage = calculatePercent(champions, allChampions)
+  const percentageText = `${role} representa ${championsPercentage}% dos ${allChampions.length} campeões`
+  
+  document.getElementById("percent-roles").innerText = percentageText// 20 de 100 (20%)
+}
+
+function removePercentChampions(){
+  document.getElementById("percent-roles").innerText = ""
 }

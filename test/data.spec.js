@@ -1,4 +1,5 @@
-import { example, anotherExample } from '../src/data.js';
+import { filterRole } from '../src/data.js';
+import { createRolesCards, getRoles, createDiv, createChampionsCards} from '../src/main.js';
 
 
 describe('example', () => {
@@ -12,12 +13,12 @@ describe('example', () => {
 });
 
 
-describe('anotherExample', () => {
+describe('filterRole', () => {
   it('is a function', () => {
-    expect(typeof anotherExample).toBe('function');
+    expect(typeof filterRole).toBe('function');
   });
 
-  it('returns `anotherExample`', () => {
-    expect(anotherExample()).toBe('OMG');
+  it('returns `filterRole`', () => {
+    expect(filterRole()).toBe('OMG');
   });
 });
