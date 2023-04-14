@@ -1,24 +1,44 @@
-import { filterRole } from '../src/data.js';
-import { createRolesCards, getRoles, createDiv, createChampionsCards} from '../src/main.js';
+import { filterRole, calculatePercent } from '../src/data.js';
 
+describe('test of filterRole function', () => {
 
-describe('example', () => {
-  it('is a function', () => {
-    expect(typeof example).toBe('function');
+  test('positive champion role filter validation', () => {
+    const champions = [
+      { id: "Irelia", tags: ["Fighter", "Assassin"] },
+      { id: "Viktor", tags: ["Mage"] },
+      { id: "Soraka", tags: ["Support", "Mage"] }
+    ]
+    const response = filterRole(champions, "Mage")
+    expect(response).toStrictEqual([champions[1], champions[2]]);
   });
 
-  it('returns `example`', () => {
-    expect(example()).toBe('example');
+  test('negative champion role filter validation', () => {
+    const champions = [
+      { id: "Irelia", tags: ["Fighter", "Assassin"] },
+      { id: "Viktor", tags: ["Mage"] },
+      { id: "Soraka", tags: ["Support", "Mage"] }
+    ]
+    const response = filterRole(champions, "Fighter")
+    expect(response).not.toStrictEqual([champions[1], champions[2]]);
   });
+
+  test('function return type validation', () => {
+    const champions = [
+      { id: "Irelia", tags: ["Fighter", "Assassin"] },
+      { id: "Viktor", tags: ["Mage"] },
+      { id: "Soraka", tags: ["Support", "Mage"] }
+    ]
+    const response = filterRole(champions, "Mage")
+    expect(typeof response).toStrictEqual("object");
+  });
+
 });
 
-
-describe('filterRole', () => {
-  it('is a function', () => {
-    expect(typeof filterRole).toBe('function');
-  });
-
-  it('returns `filterRole`', () => {
-    expect(filterRole()).toBe('OMG');
-  });
-});
+describe('test of calculatePercent function', () => {
+  test('function percentage return validation', () => {
+    const champions = [0]
+    const allChampions = [0,1,2,3,4,5,6,7,8,9]
+    const response = calculatePercent(champions, allChampions)
+    expect(response).toEqual("10.00")
+  } )   
+})

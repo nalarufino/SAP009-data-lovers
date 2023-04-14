@@ -1,14 +1,13 @@
 import lol from './data/lol/lol.js';
-import { filterRole, order, calculatePercent} from './data.js';
+import { filterRole, calculatePercent } from './data.js';
 
-console.log(order, calculatePercent);
 
-let allChampions = [];
-let championList = document.getElementById("champions-list")
+const allChampions = [];
+const championList = document.getElementById("champions-list")
 
 
 window.onload = () => {
-  for (let item in lol.data) {
+  for (const item in lol.data) {
     allChampions.push(lol.data[item]);
   }
 
@@ -46,8 +45,8 @@ window.onload = () => {
 function createChampionsCards(champions) {
   championList.innerHTML = "";
 
-  for (let i in champions) {
-    let eachCard = createDiv(champions[i].splash, champions[i].name, champions[i].info.attack, champions[i].info.defense, champions[i].info.magic, champions[i].info.difficulty);
+  for (const i in champions) {
+    const eachCard = createDiv(champions[i].splash, champions[i].name, champions[i].info.attack, champions[i].info.defense, champions[i].info.magic, champions[i].info.difficulty);
     championList.appendChild(eachCard);
   }
 
@@ -55,7 +54,7 @@ function createChampionsCards(champions) {
 
 function createDiv(photo, name, attack, defense, magic, difficulty) {
 
-  let cards = document.createElement('div')
+  const cards = document.createElement('div')
   cards.setAttribute('class', 'champion-lol')
   cards.innerHTML = (`<img src = '${photo}'> <h3>${name}</h3> <p>Níveis de Ataque: ${attack} Defesa: ${defense} Magia: ${magic}</p> <p>Dificuldade: ${difficulty}</p>`)
 
@@ -97,13 +96,13 @@ function createRolesCards(roles) {
   document.getElementById("roles-cards").innerHTML = rolesCards.join("")
 }
 
-function showPercentChampions(champions, role){
+function showPercentChampions(champions, role) {
   const championsPercentage = calculatePercent(champions, allChampions)
   const percentageText = `${role} representa ${championsPercentage}% dos ${allChampions.length} campeões`
-  
+
   document.getElementById("percent-roles").innerText = percentageText// 20 de 100 (20%)
 }
 
-function removePercentChampions(){
+function removePercentChampions() {
   document.getElementById("percent-roles").innerText = ""
 }
