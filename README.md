@@ -12,7 +12,7 @@
 
 ## 1. Resumo do projeto
 
-Neste projeto **construí em dupla uma página web para visualizar um _conjunto
+Neste projeto construí em dupla **uma página web para visualizar um _conjunto
 (set) de dados_** que permite ao usuário encontrar a melhor opção de campeão
 de League of Legends de acordo com sua função no jogo.
 
@@ -104,8 +104,6 @@ Tivemos como principal objetivo de aprendizagem:
 </p></details>
 
 ### JavaScript
-
-- [x] **Diferenciar entre tipos de dados primitivos e não primitivos**
 
 - [x] **Arrays (arranjos)**
 
@@ -234,9 +232,9 @@ campeões e filtrar na mesma tela.
 
 Finalizamos dessa maneira:
 
-<gif src= Done1.png>
+<img src= Done1.gif>
 
-<gif src= Done2.png>
+<img src= Done2.gif>
 
 A implementação permite:
 
