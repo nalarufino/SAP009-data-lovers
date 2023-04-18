@@ -32,7 +32,7 @@ Tivemos como principal objetivo de aprendizagem:
 
 ### HTML
 
-- [ ] **Uso de HTML semântico**
+- [x] **Uso de HTML semântico**
 
   <details><summary>Links</summary><p>
 
@@ -42,7 +42,7 @@ Tivemos como principal objetivo de aprendizagem:
 
 ### CSS
 
-- [ ] **Uso de seletores de CSS**
+- [x] **Uso de seletores de CSS**
 
   <details><summary>Links</summary><p>
 
@@ -50,7 +50,7 @@ Tivemos como principal objetivo de aprendizagem:
   * [CSS Selectors - MDN](https://developer.mozilla.org/pt_BR/docs/Web/CSS/CSS_Selectors)
 </p></details>
 
-- [ ] **Modelo de caixa (box model): borda, margem, preenchimento**
+- [x] **Modelo de caixa (box model): borda, margem, preenchimento**
 
   <details><summary>Links</summary><p>
 
@@ -61,7 +61,7 @@ Tivemos como principal objetivo de aprendizagem:
   * [display - CSS Tricks](https://css-tricks.com/almanac/properties/d/display/)
 </p></details>
 
-- [ ] **Uso de flexbox em CSS**
+- [x] **Uso de flexbox em CSS**
 
   <details><summary>Links</summary><p>
 
@@ -72,7 +72,7 @@ Tivemos como principal objetivo de aprendizagem:
 
 ### Web APIs
 
-- [ ] **Uso de seletores de DOM**
+- [x] **Uso de seletores de DOM**
 
   <details><summary>Links</summary><p>
 
@@ -81,7 +81,7 @@ Tivemos como principal objetivo de aprendizagem:
   * [Locating DOM elements using selectors - MDN](https://developer.mozilla.org/en-US/docs/Web/API/Document_object_model/Locating_DOM_elements_using_selectors)
 </p></details>
 
-- [ ] **Manipulação de eventos de DOM (listeners, propagação, delegação)**
+- [x] **Manipulação de eventos de DOM (listeners, propagação, delegação)**
 
   <details><summary>Links</summary><p>
 
@@ -91,7 +91,7 @@ Tivemos como principal objetivo de aprendizagem:
   * [Objeto Event](https://developer.mozilla.org/pt-BR/docs/Web/API/Event)
 </p></details>
 
-- [ ] **Manipulação dinâmica de DOM**
+- [x] **Manipulação dinâmica de DOM**
 
   <details><summary>Links</summary><p>
 
@@ -105,9 +105,9 @@ Tivemos como principal objetivo de aprendizagem:
 
 ### JavaScript
 
-- [ ] **Diferenciar entre tipos de dados primitivos e não primitivos**
+- [x] **Diferenciar entre tipos de dados primitivos e não primitivos**
 
-- [ ] **Arrays (arranjos)**
+- [x] **Arrays (arranjos)**
 
   <details><summary>Links</summary><p>
 
@@ -116,14 +116,14 @@ Tivemos como principal objetivo de aprendizagem:
   * [Array.prototype.filter() - MDN](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/filter)
 </p></details>
 
-- [ ] **Objetos (key, value)**
+- [x] **Objetos (key, value)**
 
   <details><summary>Links</summary><p>
 
   * [Objetos em JavaScript](https://curriculum.laboratoria.la/pt/topics/javascript/05-objects/01-objects)
 </p></details>
 
-- [ ] **Variáveis (declaração, atribuição, escopo)**
+- [x] **Variáveis (declaração, atribuição, escopo)**
 
   <details><summary>Links</summary><p>
 
@@ -131,7 +131,7 @@ Tivemos como principal objetivo de aprendizagem:
   * [Variáveis](https://curriculum.laboratoria.la/pt/topics/javascript/01-basics/02-variables)
 </p></details>
 
-- [ ] **Uso de condicionais (if-else, switch, operador ternário, lógica booleana)**
+- [x] **Uso de condicionais (if-else, switch, operador ternário, lógica booleana)**
 
   <details><summary>Links</summary><p>
 
@@ -139,7 +139,7 @@ Tivemos como principal objetivo de aprendizagem:
   * [Tomando decisões no seu código — condicionais - MDN](https://developer.mozilla.org/pt-BR/docs/Learn/JavaScript/Building_blocks/conditionals)
 </p></details>
 
-- [ ] **Uso de laços (while, for, for..of)**
+- [x] **Uso de laços (while, for, for..of)**
 
   <details><summary>Links</summary><p>
 
@@ -147,7 +147,7 @@ Tivemos como principal objetivo de aprendizagem:
   * [Laços e iterações - MDN](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Guide/Loops_and_iteration)
 </p></details>
 
-- [ ] **Funções (params, args, return)**
+- [x] **Funções (params, args, return)**
 
   <details><summary>Links</summary><p>
 
@@ -157,14 +157,14 @@ Tivemos como principal objetivo de aprendizagem:
   * [Funções — blocos reutilizáveis de código - MDN](https://developer.mozilla.org/pt-BR/docs/Learn/JavaScript/Building_blocks/Functions)
 </p></details>
 
-- [ ] **Testes unitários (unit tests)**
+- [x] **Testes unitários (unit tests)**
 
   <details><summary>Links</summary><p>
 
   * [Introdução ao Jest - Documentação oficial](https://jestjs.io/docs/pt-BR/getting-started)
 </p></details>
 
-- [ ] **Módulos de ECMAScript (ES modules)**
+- [x] **Módulos de ECMAScript (ES modules)**
 
   <details><summary>Links</summary><p>
 
@@ -172,29 +172,29 @@ Tivemos como principal objetivo de aprendizagem:
   * [export - MDN](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Statements/export)
 </p></details>
 
-- [ ] **Uso de linter (ESLINT)**
+- [x] **Uso de linter (ESLINT)**
 
-- [ ] **Uso de identificadores descritivos (Nomenclatura e Semântica)**
+- [x] **Uso de identificadores descritivos (Nomenclatura e Semântica)**
 
-- [ ] **Diferença entre expressões (expressions) e declarações (statements)**
+- [x] **Diferença entre expressões (expressions) e declarações (statements)**
 
 ### Controle de Versões (Git e GitHub)
 
-- [ ] **Git: Instalação e configuração**
+- [x] **Git: Instalação e configuração**
 
-- [ ] **Git: Controle de versão com git (init, clone, add, commit, status, push, pull, remote)**
+- [x] **Git: Controle de versão com git (init, clone, add, commit, status, push, pull, remote)**
 
-- [ ] **Git: Integração de mudanças entre ramos (branch, checkout, fetch, merge, reset, rebase, tag)**
+- [x] **Git: Integração de mudanças entre ramos (branch, checkout, fetch, merge, reset, rebase, tag)**
 
-- [ ] **GitHub: Criação de contas e repositórios, configuração de chave SSH**
+- [x] **GitHub: Criação de contas e repositórios, configuração de chave SSH**
 
-- [ ] **GitHub: Implantação com GitHub Pages**
+- [x] **GitHub: Implantação com GitHub Pages**
 
-- [ ] **GitHub: Colaboração pelo Github (branches | forks | pull requests | code review | tags)**
+- [x] **GitHub: Colaboração pelo Github (branches | forks | pull requests | code review | tags)**
 
 ### Design de produto
 
-- [ ] **Aplicar os princípios de desenho visual (contraste, alinhamento, hierarquia)**
+- [x] **Aplicar os princípios de desenho visual (contraste, alinhamento, hierarquia)**
 
 ## 3. Definição de produto
 
@@ -234,9 +234,9 @@ campeões e filtrar na mesma tela.
 
 Finalizamos dessa maneira:
 
-<img src= Done1.png>
+<gif src= Done1.png>
 
-<img src= Done2.png>
+<gif src= Done2.png>
 
 A implementação permite:
 
