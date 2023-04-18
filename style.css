@@ -1,0 +1,112 @@
+@font-face {
+  font-family: "Friz Quadrata";
+  font-weight: normal;
+  src: url("./fonts/Friz Quadrata Regular.ttf");
+}
+
+@font-face {
+  font-family: "Friz Quadrata";
+  font-weight: bold;
+  src: url("./fonts/Friz Quadrata Bold.otf");
+}
+
+@font-face {
+  font-family: "Friz Quadrata";
+  font-style: italic;
+  src: url("./fonts/Friz Quadrata Italic.ttf");
+}
+
+* {
+  box-sizing: border-box;
+  font-family: "Friz Quadrata";
+  color: #CD9B1D;
+  text-align: center;
+}
+
+body {
+  background-image: url(./card-imgs/BackGround.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+header {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  font-size: 20px;
+}
+
+main h2 {
+  text-shadow: 3px 0px #2f165e;
+}
+
+#roles-cards {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
+
+.role-card {
+  width: 130px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  align-items: center;
+  cursor: pointer;
+}
+
+.selected-card {
+  border-width: 2px;
+  border-style: solid;
+  border-color: #CD9B1D;
+}
+
+.role-card img {
+  display: block;
+  width: 100%;
+}
+
+.role-card h3 {
+  position: absolute;
+  bottom: 3px;
+  color: #ffffff94;
+  font-size: 1em;
+  margin: 0;
+}
+
+#champions-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 75px;
+}
+
+.champion-lol {
+  background-color: #2f165e94;
+  width: calc(33.33% - 2 * 75px / 3);
+  font-size: 22px;
+  text-shadow: 6px 3px 15px #CD9B1D;
+}
+
+.champion-lol img {
+  display: block;
+  width: 100%;
+}
+
+.champion-lol p {
+  font-style: italic;
+  font-size: 18px;
+  text-shadow: none;
+}
+
+#percent-roles {
+  display: inline-grid;
+  background-color: #2f165e94;
+  margin-top: 15px;
+  width: 600px;
+  align-items: center;
+  font-size: 25px;
+}
